@@ -160,3 +160,72 @@ Potential extensions of this project include:
 - **Genome annotation:** Compare GC variation with genes, intergenic regions, and other annotated features.
 - **Additional organisms:** Include more bacterial, viral, and eukaryotic genomes.
 - **Statistical comparisons:** Test whether observed differences between sequences or genomic regions are statistically meaningful.
+
+## 14. Script Execution Guide
+
+Run the commands below from the project root directory.
+
+### 14.1 Activate the Environment
+
+conda activate gc-analysis
+
+### 14.2 Download Reference Sequences
+
+python download_all_sequences.py
+
+This downloads five reference sequences from NCBI into the data/ directory. Existing FASTA files are skipped.
+
+Before downloading, ensure the Entrez.email setting in download_all_sequences.py contains a valid email address.
+
+### 14.3 Calculate Overall GC Content
+
+python analyze_all_sequences.py
+
+Output: results/gc_content_results.csv
+
+### 14.4 Calculate Sliding-Window GC Content
+
+python sliding_window_all.py
+
+This uses a window size of 1,000 bp and a step size of 500 bp.
+
+Output: five CSV files in results/sliding_window/.
+
+### 14.5 Generate the Final Summary
+
+python create_final_summary.py
+
+Output: results/final_gc_summary.csv
+
+### 14.6 Generate Visualisations
+
+python plot_gc_content.py
+
+Output: results/gc_content_comparison.png
+
+python plot_all_sliding_windows.py
+
+Output: five plots in results/sliding_window/plots/.
+
+### 14.7 Identify GC Extremes
+
+python find_gc_extremes.py
+
+This reports the highest and lowest GC-content windows for each sequence.
+
+### 14.8 Validate and Verify Results
+
+python validate_gc_results.py
+
+Output: results/gc_validation_comparison.csv
+
+python verify_sequence_results.py
+
+This recalculates overall sequence lengths and GC percentages and compares them with the saved results.
+
+### 14.9 Notes
+
+- Run the overall GC analysis and sliding-window analysis before generating the final summary or sliding-window plots.
+- The validation comparison checks overall GC against mean window GC; it does not independently verify every window.
+- The plotting script uses predefined whole-sequence GC values as reference lines. Update these values if the input sequences or overall GC results change.
+- The original E. coli-only scripts are available for the earlier single-sequence workflow: gc_analysis.py, sliding_window_gc.py, plot_sliding_window_gc.py, and download_sequence.py.
