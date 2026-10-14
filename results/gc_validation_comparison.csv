@@ -1,0 +1,6 @@
+Organism,Whole_Sequence_GC_Percent,Mean_Window_GC_Percent,Number_of_Windows
+Streptomyces coelicolor,72.12,72.12,17334
+Mycobacterium tuberculosis,65.61,65.62,8822
+E. coli K-12 MG1655,50.79,50.79,9282
+Human mitochondrial DNA,44.36,44.33,32
+SARS-CoV-2,37.97,37.84,58

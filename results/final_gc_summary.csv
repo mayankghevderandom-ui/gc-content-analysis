@@ -1,0 +1,6 @@
+Organism,Accession,Sequence_Length_bp,Whole_Sequence_GC_Percent,Mean_Window_GC_Percent,Highest_Window_GC_Percent,Highest_Window_Start_bp,Highest_Window_End_bp,Lowest_Window_GC_Percent,Lowest_Window_Start_bp,Lowest_Window_End_bp,GC_Range_Percentage_Points,Number_of_Windows
+Streptomyces coelicolor,NC_003888.3,8667507,72.12,72.12,84.7,4657001,4658000,51.8,5799001,5800000,32.9,17334
+Mycobacterium tuberculosis,NC_000962.3,4411532,65.61,65.62,83.1,3946501,3947500,50.2,485501,486500,32.9,8822
+E. coli K-12 MG1655,NC_000913.3,4641652,50.79,50.79,69.6,283501,284500,28.6,3798501,3799500,41.0,9282
+Human mitochondrial DNA,NC_012920.1,16569,44.36,44.33,47.75,3001,4000,39.3,10001,11000,8.45,32
+SARS-CoV-2,NC_045512.2,29903,37.97,37.84,47.1,1,1000,32.5,6501,7500,14.6,58
