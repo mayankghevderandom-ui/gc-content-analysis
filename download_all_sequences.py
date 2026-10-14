@@ -1,7 +1,10 @@
 import os
 from Bio import Entrez
 
-Entrez.email = "your-valid-email@example.com"
+Entrez.email = os.environ.get("NCBI_EMAIL")
+
+if not Entrez.email:
+    raise ValueError("Please set the NCBI_EMAIL environment variable.")
 
 SAMPLES = {
     "Streptomyces_coelicolor": "NC_003888.3",
