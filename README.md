@@ -114,3 +114,49 @@ Activate the Conda environment before running the scripts:
 conda activate gc-analysis
 
 Run the analysis scripts from the project root directory.
+
+## 11. Discussion
+
+### 11.1 Overall GC Content
+
+*Streptomyces coelicolor* had the highest overall GC content (72.12%), followed by *Mycobacterium tuberculosis* (65.61%). *Escherichia coli* had an intermediate value (50.79%), while human mitochondrial DNA (44.36%) and SARS-CoV-2 (37.97%) had lower values.
+
+GC content reflects nucleotide composition and can be influenced by evolutionary processes such as mutation patterns and natural selection. Codon usage and the composition of coding and non-coding regions can also contribute to observed patterns. However, this project measures GC content only; it does not directly test which mechanisms caused the differences.
+
+SARS-CoV-2 has a comparatively low-GC RNA genome. Mutation patterns and selection may influence its composition, but GC content alone cannot establish a specific role for host adaptation or codon bias. Human mitochondrial DNA also has a distinct genome organisation and evolutionary history from nuclear DNA.
+
+### 11.2 Regional GC Variation
+
+*E. coli* showed the widest observed sliding-window GC range, from 28.6% to 69.6%, a difference of 41.0 percentage points.
+
+Regional variation may reflect differences in gene and intergenic-region composition, horizontally acquired DNA, or genomic features such as ribosomal RNA operons. These are possible explanations, not conclusions from this analysis. Testing them would require additional analyses using genome annotations and known genomic features.
+
+### 11.3 Interpreting Window-Level Results
+
+Mean sliding-window GC percentages were close to the whole-sequence GC percentages. Small differences can arise because incomplete final windows were excluded, overlapping windows represent regions more than once, and window percentages were rounded before being saved.
+
+## 12. Visualisations
+
+### Overall GC Content Comparison
+
+![GC content comparison across five biological sequences](results/gc_content_comparison.png)
+
+### E. coli Sliding-Window GC Content
+
+![Sliding-window GC content of E. coli](results/sliding_window/plots/E_coli_gc_plot.png)
+
+### Streptomyces coelicolor Sliding-Window GC Content
+
+![Sliding-window GC content of Streptomyces coelicolor](results/sliding_window/plots/Streptomyces_coelicolor_gc_plot.png)
+
+The individual plots for *Mycobacterium tuberculosis*, human mitochondrial DNA, and SARS-CoV-2 are available in `results/sliding_window/plots/`.
+
+## 13. Future Work
+
+Potential extensions of this project include:
+
+- **GC skew analysis:** Examine differences between guanine and cytosine distribution across genomic regions.
+- **GC3 analysis:** Calculate GC content at the third position of coding-sequence codons.
+- **Genome annotation:** Compare GC variation with genes, intergenic regions, and other annotated features.
+- **Additional organisms:** Include more bacterial, viral, and eukaryotic genomes.
+- **Statistical comparisons:** Test whether observed differences between sequences or genomic regions are statistically meaningful.

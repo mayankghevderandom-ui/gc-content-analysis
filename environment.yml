@@ -1,0 +1,8 @@
+name: gc-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - biopython=1.88
+  - pandas=3.0.6
+  - matplotlib=3.11.2
