@@ -1,7 +1,7 @@
 import os
 from Bio import Entrez
 
-Entrez.email = "mayankghevde.random.com"
+Entrez.email = "your-valid-email@example.com"
 
 SAMPLES = {
     "Streptomyces_coelicolor": "NC_003888.3",
